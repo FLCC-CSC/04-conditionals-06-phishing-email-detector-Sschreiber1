@@ -19,21 +19,22 @@ subject = input("Enter the email subject line: ")
 print()
 print("SECURITY ASSESSMENT:")
 
-lower_subject = subject.lower()
+s = subject.lower()
 
-if "urgent" in lower_subject or "bank" in lower_subject:
+if "urgent" in s or "bank" in s or "immediate" in s:
     print("HIGH RISK: Possible phishing attempt.")
-elif "win" in lower_subject:
+
+elif "win" in s or "free" in s or "prize" in s:
     print("MEDIUM RISK: Suspicious offer detected.")
-elif "password" in lower_subject:
+
+elif "password" in s:
     print("LOW RISK: Verify legitimacy with sender.")
+
 else:
     print("No phishing indicators detected.")
 
 print("------------------------")
 print('Analyzed subject: "' + subject + '"')
-
-
 
 
 
